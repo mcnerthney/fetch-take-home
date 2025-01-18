@@ -8,9 +8,10 @@ Sort the results first by "listId" then by "name" when displaying.
 Filter out any items where "name" is blank or null.
 
 For Android run composeApp 
+
 For iOS run iosApp
 
-[screenshot of the Android app](images/Screenshot.png)
+![Android App Screenshot](images/Screenshot.png)
 
 ### Technologies
 
@@ -22,4 +23,3 @@ The app uses the following multiplatform dependencies in its implementation:
 - [kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization) for JSON handling
 - [Koin](https://github.com/InsertKoinIO/koin) for dependency injection
 
-> These are just some of the possible libraries to use for these tasks with Kotlin Multiplatform, and their usage here isn't a strong recommendation for these specific libraries over the available alternatives. You can find a wide variety of curated multiplatform libraries in the [kmp-awesome](https://github.com/terrakok/kmp-awesome) repository.
