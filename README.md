@@ -11,7 +11,7 @@ For Android run composeApp
 
 For iOS run iosApp
 
-![Android App Screenshot](images/Screenshot.png)
+![Android App Screenshot](images/Screenshot.png | width=100)
 
 ### Technologies
 
