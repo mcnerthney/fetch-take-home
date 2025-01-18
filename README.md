@@ -11,7 +11,9 @@ For Android run composeApp
 
 For iOS run iosApp
 
-![Android App Screenshot](images/Screenshot.png | width=100)
+Android App Screenshot
+
+<img src="https://github.com/mcnerthney/fetch-take-home/blob/main/images/Screenshot.png" width="200" height="400" />
 
 ### Technologies
 
