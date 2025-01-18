@@ -1,12 +1,11 @@
-package com.jetbrains.kmpapp.di
+package com.softllc.fetchtest.di
 
-import com.jetbrains.kmpapp.data.InMemoryMuseumStorage
-import com.jetbrains.kmpapp.data.KtorMuseumApi
-import com.jetbrains.kmpapp.data.MuseumApi
-import com.jetbrains.kmpapp.data.MuseumRepository
-import com.jetbrains.kmpapp.data.MuseumStorage
-import com.jetbrains.kmpapp.screens.detail.DetailViewModel
-import com.jetbrains.kmpapp.screens.list.ListViewModel
+import com.softllc.fetchtest.data.InMemoryItemStorage
+import com.softllc.fetchtest.data.KtorItemApi
+import com.softllc.fetchtest.data.ItemApi
+import com.softllc.fetchtest.data.ItemRepository
+import com.softllc.fetchtest.data.ItemStorage
+import com.softllc.fetchtest.screens.list.ListViewModel
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.http.ContentType
@@ -18,19 +17,20 @@ import org.koin.dsl.module
 
 val dataModule = module {
     single {
-        val json = Json { ignoreUnknownKeys = true }
+        val json = Json {
+            ignoreUnknownKeys = true
+        }
         HttpClient {
             install(ContentNegotiation) {
-                // TODO Fix API so it serves application/json
                 json(json, contentType = ContentType.Any)
             }
         }
     }
 
-    single<MuseumApi> { KtorMuseumApi(get()) }
-    single<MuseumStorage> { InMemoryMuseumStorage() }
+    single<ItemApi> { KtorItemApi(get()) }
+    single<ItemStorage> { InMemoryItemStorage() }
     single {
-        MuseumRepository(get(), get()).apply {
+        ItemRepository(get(), get()).apply {
             initialize()
         }
     }
@@ -38,7 +38,6 @@ val dataModule = module {
 
 val viewModelModule = module {
     factoryOf(::ListViewModel)
-    factoryOf(::DetailViewModel)
 }
 
 fun initKoin() {

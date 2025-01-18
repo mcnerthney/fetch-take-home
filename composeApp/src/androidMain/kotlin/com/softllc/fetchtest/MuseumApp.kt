@@ -1,7 +1,7 @@
-package com.jetbrains.kmpapp
+package com.softllc.fetchtest
 
 import android.app.Application
-import com.jetbrains.kmpapp.di.initKoin
+import com.softllc.fetchtest.di.initKoin
 
 class MuseumApp : Application() {
     override fun onCreate() {
