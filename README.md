@@ -1,6 +1,6 @@
 Fetch Rewards Coding Exercise - Software Engineering - Mobile
 
-a native Android app in Kotlin or Java that retrieves the data from https://fetch-hiring.s3.amazonaws.com/hiring.json.
+Kotlin Multiplatform App that retrieves the data from https://fetch-hiring.s3.amazonaws.com/hiring.json.
 
 Display this list of items to the user based on the following requirements:
 Display all the items grouped by "listId"
@@ -10,11 +10,9 @@ Filter out any items where "name" is blank or null.
 For Android run composeApp 
 For iOS run iosApp
 
-sceenshot of the Andrpid app](images/Screenshot.png)
+[screenshot of the Android app](images/Screenshot.png)
 
 ### Technologies
-
-The data displayed by the app is from [The Metropolitan Museum of Art Collection API](https://metmuseum.github.io/).
 
 The app uses the following multiplatform dependencies in its implementation:
 
