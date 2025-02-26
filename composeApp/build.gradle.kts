@@ -55,6 +55,22 @@ kotlin {
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.navigation.compose)
         }
+
+    //    val commonTest by getting {
+    //        dependencies {
+    //            implementation(kotlin("test"))
+    //        }
+     //   }
+       commonTest.dependencies {
+           implementation(libs.kotlin.test)
+           implementation(libs.mock.common)
+        }
+
+
+
+    //    commonTest.dependencies {
+     //       implementation(kotlin("test"))
+    //    }
     }
 }
 
