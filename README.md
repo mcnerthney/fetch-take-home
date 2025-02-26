@@ -1,6 +1,6 @@
 Fetch Rewards Coding Exercise - Software Engineering - Mobile
 
-Kotlin  Multiplatform App that retrieves the data from https://fetch-hiring.s3.amazonaws.com/hiring.json.
+Kotlin Multiplatform App that retrieves the data from https://fetch-hiring.s3.amazonaws.com/hiring.json.
 
 Display this list of items to the user based on the following requirements:
 Display all the items grouped by "listId"
